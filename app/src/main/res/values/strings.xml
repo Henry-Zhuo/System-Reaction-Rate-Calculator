@@ -1,0 +1,40 @@
+<!--
+Changes:
+    Thursday May 23 2019 1:36:33 pm - :37:47 pm
+            Changed add_item_label to add_new_item_label, in order to add add_item_label
+                for addItemActivity
+    Tuesday May 28 2019 12:15:58 pm - :16:36 pm
+            Added "add_item_activity"
+
+-->
+<resources>
+    <string name="app_name">System Processing Rate Calculator</string>
+    <string name="title_activity_add_recipe">AddRecipeActivity</string>
+    <string name="input1_label">Input 1:</string>
+    <string name="input2_label">Input 2:</string>
+    <string name="rate_label">Rate (Times recipe completed per unit time):</string>
+    <string name="rate_amount">0</string>
+    <string name="input1_amount">0</string>
+    <string name="input2_amount">0</string>
+    <string name="rate_unit_label">completions of recipe in unit time</string>
+    <string name="output1_label">Output 1:</string>
+    <string name="output2_label">Output 2:</string>
+    <string name="output1_amount">0</string>
+    <string name="output2_amount">0</string>
+    <string name="rate_infinite_check">Infinite conversion rate?</string>
+    <string name="add_item_button">Add new item</string>
+    <string name="add_new_item_label">Add a new item</string>
+    <string name="summary_label">Summary:</string>
+    <string name="item1_stats">item1: +0 / -0 per unit time</string>
+    <string name="item2_stats">Item2: +0 / -0 per unit time</string>
+    <string name="item3_stats">Item3: +0 / -0 per unit time</string>
+    <string name="item4_stats">Item4: +0 / -0 per unit time</string>
+    <string name="add_item_label">Add item:</string>
+    <string name="item_name_label">Item name:</string>
+    <string name="name_value">Name?</string>
+    <string name="rate_of_input_label">Rate of input per unit time:</string>
+    <string name="input_amount">1</string>
+    <string name="input_infinite_check">Infinite resource input?</string>
+    <string name="finish_label">Finish</string>
+    <string name="add_item_activity">AddItemActivity</string>
+</resources>

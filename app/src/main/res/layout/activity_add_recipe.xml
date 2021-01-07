@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Changes:
+        Wednesday May 15 2019 10:29:19 pm - Thursday May 16 2019 1:17:33 am
+                Created activity
+                Added input1Label, input2Label, input1Spinner, input1EditText, input2EditText,
+                    input2Spinner, rateLabel, rateEditText, rateUnitLabel,
+                    output1Label, output1EditText, output1Spinner, output2Label, output2EditText,
+                    output2Spinner, rateInfiniteCheckBox, addItemLabel, and addItemButton.
+        Thursday May 23 2019 12:51:18 pm - 1:13:03 pm
+                Changed rateLabel to be 30dp from input2EditText instead of 64dp
+                Changed output1Label to be 60 dp from rateEditText instead of 100dp
+                Added summaryLabel, item1TextView, item2TextView, item3TextView, item4TextView.
+                Changed addItemLabel to be 50dp from the top instead of 64dp
+                Changed addItemButton to be 35dp from the top instead of 49dp
+            1:38:52 pm - :40:36 pm
+                Changed (refactored) addItemLabel to addNewItemLabel, in order for addItemLabel
+                    to be used in addItemActivity
+        Monday May 27 2019 9:48:33 pm - :52:39 pm
+                Changed item1TextView to input1StatsTextView, item2TextView to input2StatsTextView,
+                    item3TextView to output1StatsTextView, and item4TextView to output2StatsTextView
+        Tuesday May 28 2019 3:25:50 pm - 3:27:07 pm
+                Changed addItemButton to use @string/add_new_item_label
+                    instead of @string/add_item_button
+-->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddRecipeActivity">
+
+    <TextView
+        android:id="@+id/input1Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/input1_label"
+        app:layout_constraintStart_toStartOf="@+id/addNewItemLabel"
+        app:layout_constraintTop_toBottomOf="@+id/addNewItemLabel" />
+
+    <TextView
+        android:id="@+id/input2Label"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/input2_label"
+        app:layout_constraintStart_toStartOf="@+id/input1EditText"
+        app:layout_constraintTop_toBottomOf="@+id/input1EditText" />
+
+    <Spinner
+        android:id="@+id/input1Spinner"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/input1EditText"
+        app:layout_constraintTop_toBottomOf="@+id/input1Label" />
+
+    <EditText
+        android:id="@+id/input1EditText"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/input1_amount"
+        app:layout_constraintStart_toStartOf="@+id/input1Label"
+        app:layout_constraintTop_toBottomOf="@+id/input1Label" />
+
+    <EditText
+        android:id="@+id/input2EditText"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/input2_amount"
+        app:layout_constraintStart_toStartOf="@+id/input2Label"
+        app:layout_constraintTop_toBottomOf="@+id/input2Label" />
+
+    <Spinner
+        android:id="@+id/input2Spinner"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/input2EditText"
+        app:layout_constraintTop_toBottomOf="@+id/input2Label" />
+
+    <TextView
+        android:id="@+id/rateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/rate_label"
+        app:layout_constraintStart_toStartOf="@+id/input2EditText"
+        app:layout_constraintTop_toBottomOf="@+id/input2EditText" />
+
+    <EditText
+        android:id="@+id/rateEditText"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/rate_amount"
+        app:layout_constraintStart_toStartOf="@+id/rateLabel"
+        app:layout_constraintTop_toBottomOf="@+id/rateLabel" />
+
+    <TextView
+        android:id="@+id/rateUnitLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/rate_unit_label"
+        app:layout_constraintStart_toEndOf="@+id/rateEditText"
+        app:layout_constraintTop_toBottomOf="@+id/rateLabel" />
+
+    <TextView
+        android:id="@+id/output1Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/output1_label"
+        app:layout_constraintStart_toStartOf="@+id/rateEditText"
+        app:layout_constraintTop_toBottomOf="@+id/rateEditText" />
+
+    <EditText
+        android:id="@+id/output1EditText"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/output1_amount"
+        app:layout_constraintStart_toStartOf="@+id/output1Label"
+        app:layout_constraintTop_toBottomOf="@+id/output1Label" />
+
+    <Spinner
+        android:id="@+id/output1Spinner"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/output1EditText"
+        app:layout_constraintTop_toBottomOf="@+id/output1Label" />
+
+    <TextView
+        android:id="@+id/output2Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/output2_label"
+        app:layout_constraintStart_toStartOf="@+id/output1EditText"
+        app:layout_constraintTop_toBottomOf="@+id/output1EditText" />
+
+    <EditText
+        android:id="@+id/output2EditText"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/output2_amount"
+        app:layout_constraintStart_toStartOf="@+id/output2Label"
+        app:layout_constraintTop_toBottomOf="@+id/output2Label" />
+
+    <Spinner
+        android:id="@+id/output2Spinner"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/output2EditText"
+        app:layout_constraintTop_toBottomOf="@+id/output2Label" />
+
+    <CheckBox
+        android:id="@+id/rateInfiniteCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/rate_infinite_check"
+        app:layout_constraintStart_toStartOf="@+id/rateEditText"
+        app:layout_constraintTop_toBottomOf="@+id/rateEditText" />
+
+    <TextView
+        android:id="@+id/addNewItemLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/add_new_item_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/addItemButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="64dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/add_new_item_label"
+        app:layout_constraintStart_toEndOf="@+id/addNewItemLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/summaryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/summary_label"
+        app:layout_constraintStart_toStartOf="@+id/output2EditText"
+        app:layout_constraintTop_toBottomOf="@+id/output2EditText" />
+
+    <TextView
+        android:id="@+id/input1StatsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/item1_stats"
+        app:layout_constraintStart_toStartOf="@+id/summaryLabel"
+        app:layout_constraintTop_toBottomOf="@+id/summaryLabel" />
+
+    <TextView
+        android:id="@+id/input2StatsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/item2_stats"
+        app:layout_constraintStart_toStartOf="@+id/input1StatsTextView"
+        app:layout_constraintTop_toBottomOf="@+id/input1StatsTextView" />
+
+    <TextView
+        android:id="@+id/output1StatsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/item3_stats"
+        app:layout_constraintStart_toStartOf="@+id/input2StatsTextView"
+        app:layout_constraintTop_toBottomOf="@+id/input2StatsTextView" />
+
+    <TextView
+        android:id="@+id/output2StatsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/item4_stats"
+        app:layout_constraintStart_toStartOf="@+id/output1StatsTextView"
+        app:layout_constraintTop_toBottomOf="@+id/output1StatsTextView" />
+</android.support.constraint.ConstraintLayout>

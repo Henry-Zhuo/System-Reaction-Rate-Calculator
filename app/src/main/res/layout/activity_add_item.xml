@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Changes:
+    Thursday May 23 2019 1:25;15 pm
+            Created this layout (.xml) file, along with the class (.java) file
+        1:32:07 pm - :45:34 pm
+            Added addNewItemLabel, itemNameLabel, and nameEditText.
+    Saturday May 25 2019 9:33:38 pm - :42:50 pm
+            Added rateOfInputLabel, inputEditText, and inputInfiniteCheckBox
+    Monday May 27 2019 8:32:35 pm - :35:16 pm
+            Added finishButton
+
+
+-->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddItemActivity">
+
+    <TextView
+        android:id="@+id/addNewItemLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/add_item_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/itemNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/item_name_label"
+        app:layout_constraintStart_toStartOf="@+id/addNewItemLabel"
+        app:layout_constraintTop_toBottomOf="@+id/addNewItemLabel" />
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="430dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/name_value"
+        app:layout_constraintStart_toStartOf="@+id/itemNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/itemNameLabel" />
+
+    <TextView
+        android:id="@+id/rateOfInputLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/rate_of_input_label"
+        app:layout_constraintStart_toStartOf="@+id/nameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/nameEditText" />
+
+    <EditText
+        android:id="@+id/inputEditText"
+        android:layout_width="430dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/input_amount"
+        app:layout_constraintStart_toStartOf="@+id/rateOfInputLabel"
+        app:layout_constraintTop_toBottomOf="@+id/rateOfInputLabel" />
+
+    <CheckBox
+        android:id="@+id/inputInfiniteCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/input_infinite_check"
+        app:layout_constraintStart_toStartOf="@+id/inputEditText"
+        app:layout_constraintTop_toBottomOf="@+id/inputEditText" />
+
+    <Button
+        android:id="@+id/finishButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/finish_label"
+        app:layout_constraintEnd_toEndOf="@+id/inputEditText"
+        app:layout_constraintStart_toStartOf="@+id/inputEditText"
+        app:layout_constraintTop_toBottomOf="@+id/inputInfiniteCheckBox" />
+</android.support.constraint.ConstraintLayout>
