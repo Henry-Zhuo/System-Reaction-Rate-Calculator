@@ -1,17 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-Changes:
-    Thursday May 23 2019 1:25;15 pm
-            Created this layout (.xml) file, along with the class (.java) file
-        1:32:07 pm - :45:34 pm
-            Added addNewItemLabel, itemNameLabel, and nameEditText.
-    Saturday May 25 2019 9:33:38 pm - :42:50 pm
-            Added rateOfInputLabel, inputEditText, and inputInfiniteCheckBox
-    Monday May 27 2019 8:32:35 pm - :35:16 pm
-            Added finishButton
-
-
--->
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"

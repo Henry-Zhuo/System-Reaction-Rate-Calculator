@@ -1,28 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    Changes:
-        Wednesday May 15 2019 10:29:19 pm - Thursday May 16 2019 1:17:33 am
-                Created activity
-                Added input1Label, input2Label, input1Spinner, input1EditText, input2EditText,
-                    input2Spinner, rateLabel, rateEditText, rateUnitLabel,
-                    output1Label, output1EditText, output1Spinner, output2Label, output2EditText,
-                    output2Spinner, rateInfiniteCheckBox, addItemLabel, and addItemButton.
-        Thursday May 23 2019 12:51:18 pm - 1:13:03 pm
-                Changed rateLabel to be 30dp from input2EditText instead of 64dp
-                Changed output1Label to be 60 dp from rateEditText instead of 100dp
-                Added summaryLabel, item1TextView, item2TextView, item3TextView, item4TextView.
-                Changed addItemLabel to be 50dp from the top instead of 64dp
-                Changed addItemButton to be 35dp from the top instead of 49dp
-            1:38:52 pm - :40:36 pm
-                Changed (refactored) addItemLabel to addNewItemLabel, in order for addItemLabel
-                    to be used in addItemActivity
-        Monday May 27 2019 9:48:33 pm - :52:39 pm
-                Changed item1TextView to input1StatsTextView, item2TextView to input2StatsTextView,
-                    item3TextView to output1StatsTextView, and item4TextView to output2StatsTextView
-        Tuesday May 28 2019 3:25:50 pm - 3:27:07 pm
-                Changed addItemButton to use @string/add_new_item_label
-                    instead of @string/add_item_button
--->
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"

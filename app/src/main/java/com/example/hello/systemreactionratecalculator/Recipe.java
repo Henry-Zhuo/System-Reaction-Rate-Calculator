@@ -4,65 +4,6 @@ import java.util.LinkedList;
 
 /**
  * A class to remember the Items and recipe
- *
- * Monday May 27 2019 12:14:02 pm
- *         Created this class
- *     12:15:00 pm - :25:19 pm
- *         Added instance variables LinkedList items, and int processingRate
- *         Added parameterized constructor, addItems() and setRate().
- *     1:39:14 pm - :44:10 pm
- *         Added sanity checking to addItems
- *     1:50:17 pm - :09:17 pm
- *         Added toString() method
- *         Added boolean infiniteRate instance variable
- *         Initialized infiniteRate in parameterized constructor
- *         Added setInfiniteRate()
- *         Added hasInfiniteRate()
- *         Added String spacer instance variable
- *     2:14:51 pm - :19:10 pm
- *         Changed String spacer to be a static instance variable
- *     2:53:05 pm - :53:22 pm
- *         Renamed (refactored) addItems() to addItems()
- *     11:27:13 pm - :27:54 pm
- *         Added argumentless constructor
- * Tuesday May 28 2019 12:15:50 am - 3:27:10 am
- *         Added Item input1, Item input2, Item output1, and Item output2
- *         Added setInput1(), getInput1(), setInput2(), getInput2(), setOutput1(), getOutput1(),
- *             setOutput2() and getOutput2()
- *         Added calculateRecipe()
- *         Added getRate()
- *         Added int input1Amount, int input2Amount, int output1Amount, and int output2Amount
- *             instance variables
- *         Added makeTempItem()
- *         Added calculateRecipe(), determineMaxProcessingRate()
- *             and determineLimitedProcessingRate()
- *         Added findItem()
- *         Added setInput1Amount(), setInput2Amount(), setOutput1Amount() and setOutput2Amount()
- *     3:43:12 am - :48:20 am
- *         Changed toString() to also include Item input1, Item input2, Item output1, Item output2,
- *             int input1Amount, int input2Amount, int output1Amount, and int output2Amount
- *             instance variables
- *     3:44:23 pm - :46:22 pm
- *         Changed parameterized constructor to initialize Item input1, Item input2, Item output1,
- *             and Item output2.
- *     9:18:10 pm - :24:46 pm
- *         Added String PLACE_HOLDER_ITEM_NAME instance variable
- *         Changed parameterized constructor to create only one placeholder Item and assign it as
- *             the inputs and outputs
- *         Changed parameterized constructor to assign default values of 0 to input amounts and
- *             output amounts
- *         Renamed (refactored) String spacer to String SPACER
- *     10:16:25 pm - :21:56
- *         Added getItems()
- * Wednesday May 29 2019 1:13:26 am - :15:19 am
- *         Changed getItems() to use items.removeFirst() instead of items.getFirst(), as the intent
- *             was to move the first item to the back, not copy the first item the back
- *     3:43:39 am - :46:02 am
- *         Added getInput1Amount(), getInput2Amount(), getOutput1Amount(), and getOutput2Amount()
- *
- *
- *
- *
  */
 public class Recipe {
     private LinkedList<Item> items;
@@ -128,13 +69,6 @@ public class Recipe {
 
     /**
      * An accessor that returns all Items in items
-     *
-     * Changes:
-     *     Tuesday May 28 2019 10:17:30 pm - :21:48 pm for original code
-     *     Wednesday May 29 2019 1:14:30 am - :15:12 am
-     *             Changed to use items.removeFirst() instead of items.getFirst(), as the intent
-     *                 was to move the first item to the back, not copy the first item the back
-     *
      */
     public Item[] getItems() {
         //Save the items to an array
@@ -159,10 +93,6 @@ public class Recipe {
 
     /**
      * Accessor method that returns processingRate
-     *
-     * Changes:
-     *     Tuesday May 28 2019 12:52:31 am - :54:14 am
-     *             for original code
      */
     public int getRate() {
         //If the rate is infinite, return -1 to denote it
@@ -184,10 +114,6 @@ public class Recipe {
 
     /**
      * A mutator method that sets input1 to a non-null Item
-     *
-     * Changes:
-     *     Tuesday May 28 2019 12:24:57 am - 12:36:56 am
-     *             for original code
      */
     public void setInput1(Item input) {
         if (input == null) {
@@ -205,10 +131,6 @@ public class Recipe {
 
     /**
      * An accessor method that returns input1
-     *
-     * Changes:
-     *     Tuesday May 28 2019 12:43:04 am - :43:55 am
-     *             for original code (Code was auto completed by Android Studio (v 3.1.1))
      */
     public Item getInput1() {
         return input1;
@@ -216,14 +138,6 @@ public class Recipe {
 
     /**
      * A mutator method that sets input2 to a non-null Item
-     *
-     * Changes:
-     *     Tuesday May 28 2019 12:24:57 am - 12:36:56 am
-     *             for original code from setInput1()
-     *         12:37:17 am
-     *             Copied from setInput1()
-     *         12:38:40 am - :39:11 am
-     *             Modified to apply to input2 instead of input1
      */
     public void setInput2(Item input) {
         if (input == null) {
@@ -241,10 +155,6 @@ public class Recipe {
 
     /**
      * An accessor method that returns input2
-     *
-     * Changes:
-     *     Tuesday May 28 2019 12:45:47 am - :46:23 am
-     *             for original code (auto completed by Android Studio v3.1.1)
      */
     public Item getInput2() {
         return input2;
@@ -252,14 +162,6 @@ public class Recipe {
 
     /**
      * A mutator method that sets output1 to a non-null Item
-     *
-     * Changes:
-     *     Tuesday May 28 2019 12:24:57 am - 12:36:56 am
-     *             for original code from setInput1()
-     *         12:39:24 am
-     *             Copied from setInput1()
-     *         12:39:43 am - :40:46 am
-     *             Modified to apply to output1
      */
     public void setOutput1(Item output) {
         if (output == null) {
@@ -277,10 +179,6 @@ public class Recipe {
 
     /**
      * An accessor method that returns output1
-     *
-     * Changes:
-     *     Tuesday May 28 2019 12:46:40 am - :46:55 am
-     *             for original code (auto completed by Android Studio v3.1.1)
      */
     public Item getOutput1() {
         return output1;
@@ -288,14 +186,6 @@ public class Recipe {
 
     /**
      * A mutator method that sets input1 to a non-null Item
-     *
-     * Changes:
-     *     Tuesday May 28 2019 12:24:57 am - 12:36:56 am
-     *             for original code from setInput1()
-     *         12:41:13 am
-     *             Copied from setInput1()
-     *         12:41:29 am - :42:07 am
-     *             Modified to apply to output2
      */
     public void setOutput2(Item output) {
         if (output == null) {
@@ -313,10 +203,6 @@ public class Recipe {
 
     /**
      * An accessor method that returns output2
-     *
-     * Changes:
-     *     Tuesday May 28 2019 12:47:11 am - :47:38 am
-     *             for original code (auto completed by Android Studio v3.1.1)
      */
     public Item getOutput2() {
         return output2;
@@ -344,10 +230,6 @@ public class Recipe {
 
     /**
      * A helper method that makes a "temp" Item
-     *
-     * Changes:
-     *     Tuesday May 28 2019 2:34:55 am - :36:27 am
-     *             for original code
      */
     private Item makeTempItem() {
         return new Item("null", 0, false);
@@ -355,9 +237,6 @@ public class Recipe {
 
     /**
      * A mutator for input1Amount
-     *
-     * Changes:
-     *     Tuesday May 28 2019 3:15:35 am - :16:27 am for original code
      */
     public void setInput1Amount(int input) {
         input1Amount = Math.abs(input);
@@ -365,8 +244,6 @@ public class Recipe {
 
     /**
      * A mutator for input2Amount
-     *
-     * Tuesday May 28 2019 3:17:07 am - :17:39 am for original code
      */
     public void setInput2Amount(int input) {
         input2Amount = Math.abs(input);
@@ -374,8 +251,6 @@ public class Recipe {
 
     /**
      * A mutator for output1Amount
-     *
-     * Tuesday May 28 2019 3:18:00 am - :18:30 am
      */
     public void setOutput1Amount(int output) {
         output1Amount = Math.abs(output);
@@ -383,8 +258,6 @@ public class Recipe {
 
     /**
      * A mutator for output2Amount
-     *
-     * Tuesday May 28 2019 3:18:47 am - :19:22 am
      */
     public void setOutput2Amount(int output) {
         output2Amount = Math.abs(output);
@@ -393,15 +266,6 @@ public class Recipe {
     /**
      * A method to calculate the rates of the Items. Basically a limiting reactant calculation with
      * quite a few extras
-     *
-     * Changes:
-     *     Tuesday May 28 2019 12:49:43 am - 2:24:45 am
-     *             for original code
-     *     Wednesday May 29 2019 3:13:05 am -
-     *             Removed int input1Input and int input2Input
-     *             Changed check for if recipe is infinitely fast so if it fails, it does not do anything,
-     *                 but the code original for when it fails now applies at the end of the function.
-     *             Added return statement for the check if the inputs are infinite when the processing rate is infinite
      */
     public void calculateRecipe() {
         //Determine the processing rate based on any limiting input(s)
@@ -442,17 +306,6 @@ public class Recipe {
 
     /**
      * A helper method that determines what the maximum processing rate is
-     *
-     * Changes:
-     *     Tuesday May 28 2019 1:40:46 am - 2:08:54 am
-     *             for original code
-     *         2:25:02 am - :30:36 am
-     *             Changed so if an input Item has infinite input, then treat it the same
-     *                 as not needing input
-     *     Wednesday May 29 2019 1:23:06 am - 1:25:02 am
-     *             Changed so it returns the processing rate, and not the ratio needed to multiply
-     *                 the current processing rate by to get the max rate
-     *
      */
     private int determineMaxProcessingRate() {
         int input1UseRatio;
@@ -502,14 +355,6 @@ public class Recipe {
     /**
      * A helper method that determines the processing rate that will not over-consume the limiting
      * input
-     *
-     * Changes:
-     *     Tuesday May 28 2019 2:18:21 am - :21:30 am
-     *             for original code
-     *     Wednesday May 29 2019 3:30:08 am - :31:22 am
-     *             Removed + 0.0001 from the check if limitingRatio is less than 1.0.
-     *                 It was supposed to account for floating point imprecision,
-     *                 but it can mess up the logic when limitingRatio = 1.0
      */
     private int determineLimitedProcessingRate() {
         //Determine the input rates of the inputs
@@ -539,10 +384,6 @@ public class Recipe {
 
     /**
      * A method that finds and returns an Item based on the name of it.
-     *
-     * Changes:
-     *     Tuesday May 28 2019 2:43:21 am - :58:01 am
-     *             for original code
      */
     public Item findItem(String name) {
         //Use linear search to find an Item with the same name
@@ -562,14 +403,8 @@ public class Recipe {
         return null;
     }
 
-    //A method that returns a String representation of the object
     /**
      * A method that returns a String representation of the object
-     *
-     * Tuesday May 28 2019 3:45:03 am - :48:13 am
-     *         Added code to save Item input1, Item input2, Item output1, Item output2,
-     *             int input1Amount, int input2Amount, int output1Amount, and int output2Amount
-     *             instance variables
      */
     public String toString() {
         //Use a temporary String to save the parts of the String together

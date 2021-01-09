@@ -5,23 +5,6 @@ https://stackoverflow.com/questions/40508303/the-activity-must-be-exported-or-co
 and http://www.informit.com/articles/article.aspx?p=1646053&seqNum=3
 
 Icon from https://material.io/tools/icons/?icon=rotate_90_degrees_ccw&style=baseline
-
-Changes:
-    Tuesday May 28 2019 4:21:07 am - :25:07 am
-            Added intent-filter tag to AddRecipeActivity
-            Removed ProjectSelectActivity
-        4:27:38 am - :28:14 am
-            Locked orientation of app
-        4:33:01 am
-            Changed icon of app to baseline_rotate_90_degrees_ccw_black_18dp from 2x folder from
-                material.io/tools/icons/?icon=rotate_90_degrees_ccw&style=baseline
-        12:06:23 pm - :21:39 pm
-            Removed android:label="@string/title_activity_add_recipe" from AddRecipeActivity
-            Added intent filter and label for AddItemActivity
-        3:21:01 pm -
-            Changed android:label for AddItemActivity from "AddItemActivity" to
-                "@string/add_item_activity"
-
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hello.systemreactionratecalculator">

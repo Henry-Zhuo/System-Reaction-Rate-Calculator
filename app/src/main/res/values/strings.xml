@@ -1,12 +1,3 @@
-<!--
-Changes:
-    Thursday May 23 2019 1:36:33 pm - :37:47 pm
-            Changed add_item_label to add_new_item_label, in order to add add_item_label
-                for addItemActivity
-    Tuesday May 28 2019 12:15:58 pm - :16:36 pm
-            Added "add_item_activity"
-
--->
 <resources>
     <string name="app_name">System Processing Rate Calculator</string>
     <string name="title_activity_add_recipe">AddRecipeActivity</string>
